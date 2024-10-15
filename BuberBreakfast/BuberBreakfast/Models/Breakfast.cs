@@ -1,5 +1,3 @@
-using BuberBreakfast.Contracts.Breakfast;
-
 namespace BuberBreakfast.Models;
 
 public class Breakfast

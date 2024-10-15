@@ -1,5 +1,6 @@
 using BuberBreakfast.Contracts.Breakfast;
 using BuberBreakfast.Models;
+using BuberBreakfast.Services.Breakfasts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuberBreakfast.Controllers;
@@ -8,6 +9,13 @@ namespace BuberBreakfast.Controllers;
 [Route("breakfasts")]
 
 public class BreakfastsController: ControllerBase{
+
+
+    private readonly IBreakfastService _breakfastService;
+
+    public BreakfastsController(IBreakfastService breakfastService) {
+        _breakfastService = breakfastService;
+    }
 
     //post request to post a brakfast
     [HttpPost]
@@ -25,6 +33,7 @@ public class BreakfastsController: ControllerBase{
         );
 
         //TODO:save the brakfast to the db
+        _breakfastService.CreateBreakfast(breakfast);
 
 
         var response = new BreakfastResponse(
@@ -45,22 +54,53 @@ public class BreakfastsController: ControllerBase{
     }
 
     //get request to get a breakfast with id
-    [HttpGet("/{id:guid}")]
+    [HttpGet("{id:guid}")]
     public IActionResult GetBreakfast(Guid id){
-        return Ok(id);
+
+        Breakfast breakfast = _breakfastService.GetBreakfast(id);
+
+        var response = new BreakfastResponse(
+            breakfast.Id,
+            breakfast.Name,
+            breakfast.Description,
+            breakfast.StartDateTime,
+            breakfast.EndDateTime,
+            breakfast.LastModifiedDateTime,
+            breakfast.Savory,
+            breakfast.Sweet
+        );
+        return Ok(response);
     }
 
     // update/put request to update a breakfast
-    [HttpPut("/{id:guid}")]
+    [HttpPut("{id:guid}")]
     public IActionResult UpsertBreakfast(UpsertBreakfastRequest request, Guid id){
-        return Ok(request);
+
+        Breakfast breakfast = new Breakfast(
+            id,
+            request.Name,
+            request.Description,
+            request.StartDateTime,
+            request.EndDateTime,
+            DateTime.UtcNow,
+            request.Savory,
+            request.Sweet
+        );
+
+        _breakfastService.UpsertBreakfast(breakfast,id);
+
+        return NoContent();
     }
 
 
     //get request to get a breakfast with id
-    [HttpDelete("/{id:guid}")]
+    [HttpDelete("{id:guid}")]
     public IActionResult DeleteBreakfast(Guid id){
-        return Ok(id);
+        
+        _breakfastService.DeleteBreakfast(id);
+
+        return NoContent();
+
     }
 
 

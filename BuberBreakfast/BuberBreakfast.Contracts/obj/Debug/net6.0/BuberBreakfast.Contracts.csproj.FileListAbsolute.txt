@@ -1,7 +1,6 @@
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/bin/Debug/net6.0/BuberBreakfast.Contracts.deps.json
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/bin/Debug/net6.0/BuberBreakfast.Contracts.dll
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/bin/Debug/net6.0/BuberBreakfast.Contracts.pdb
-/home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/BuberBreakfast.Contracts.csproj.AssemblyReference.cache
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/BuberBreakfast.Contracts.GeneratedMSBuildEditorConfig.editorconfig
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/BuberBreakfast.Contracts.AssemblyInfoInputs.cache
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/BuberBreakfast.Contracts.AssemblyInfo.cs
@@ -10,3 +9,4 @@
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/refint/BuberBreakfast.Contracts.dll
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/BuberBreakfast.Contracts.pdb
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/ref/BuberBreakfast.Contracts.dll
+/home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast.Contracts/obj/Debug/net6.0/BuberBreakfast.Contracts.csproj.AssemblyReference.cache
