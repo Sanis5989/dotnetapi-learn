@@ -1,4 +1,5 @@
 using BuberBreakfast.Models;
+using ErrorOr;
 
 namespace BuberBreakfast.Services.Breakfasts;
 
@@ -6,11 +7,10 @@ namespace BuberBreakfast.Services.Breakfasts;
 
 
 public interface IBreakfastService{
-    void CreateBreakfast(Breakfast breakfast);
-    Breakfast GetBreakfast(Guid Id);
+    ErrorOr<Created> CreateBreakfast(Breakfast breakfast);
+    ErrorOr<Breakfast> GetBreakfast(Guid Id);
 
+    ErrorOr<UpsertedBreakfast> UpsertBreakfast(Breakfast breakfast);
 
-    void UpsertBreakfast(Breakfast breakfast, Guid id);
-
-    void DeleteBreakfast(Guid id);
+    ErrorOr<Deleted> DeleteBreakfast(Guid id);
 }

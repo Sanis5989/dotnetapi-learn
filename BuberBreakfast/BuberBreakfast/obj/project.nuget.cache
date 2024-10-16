@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HFK7fS6+l/WSVFb3Gv1lKcuJlceU6IgTouOnm6LA7WOOfebVbBS3gh4Vn1O/za7oyivNaTCLjRU1owSQpnX7PQ==",
+  "dgSpecHash": "wrUDPyGZ6pV+BmRhYNdB9T2pBsfmof/4kIUR/YilqfONfOCVpeNvLfu0+76qF9cknUi90V0u3jFutN0BGeXnEw==",
   "success": true,
   "projectFilePath": "/home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast/BuberBreakfast.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/sanish/.nuget/packages/erroror/2.0.1/erroror.2.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

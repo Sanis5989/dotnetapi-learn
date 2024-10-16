@@ -22,3 +22,4 @@
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast/obj/Debug/net6.0/BuberBreakfast.pdb
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast/obj/Debug/net6.0/BuberBreakfast.genruntimeconfig.cache
 /home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast/obj/Debug/net6.0/ref/BuberBreakfast.dll
+/home/sanish/Desktop/Code/Project/net api /dotnetapi-learn/BuberBreakfast/BuberBreakfast/bin/Debug/net6.0/ErrorOr.dll
