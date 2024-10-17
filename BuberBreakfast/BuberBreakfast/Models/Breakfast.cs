@@ -1,3 +1,7 @@
+using ErrorOr;
+using BuberBreakfast.Contracts.Breakfast;
+using BuberBreakfast.ServiceErrors;
+
 namespace BuberBreakfast.Models;
 
 public class Breakfast
@@ -17,7 +21,7 @@ public class Breakfast
     public List<string> Savory { get; }
     public List<string> Sweet { get; }
 
-    public Breakfast(
+    private Breakfast(
         Guid id,
         string name,
         string description,
@@ -35,6 +39,43 @@ public class Breakfast
         LastModifiedDateTime = lastModifiedDateTime;
         Savory = savory;
         Sweet = sweet;
+    }
+
+
+    //bussines logic invariants
+    public static ErrorOr<Breakfast> Create(
+        string name,
+        string description,
+        DateTime startDateTime,
+        DateTime endDateTime,
+        List<string> savory,
+        List<string> sweet,
+        Guid? id = null
+        )
+    {
+        List<Error> errors = new();
+        if(name.Length is < MinNameLength or > MaxNameLength){
+            errors.Add(Errors.Breakfast.InvalidName);
+        }
+
+        if(description.Length is < MinDescriptionLength or > MaxDescriptionLength){
+            errors.Add(Errors.Breakfast.InvalidDescription);
+        }
+
+        if(errors.Count > 0){
+            return errors;
+        }
+
+        return new Breakfast(
+            id ?? Guid.NewGuid(),
+            name,
+            description,
+            startDateTime,
+            endDateTime,
+            DateTime.UtcNow,
+            savory,
+            sweet
+            );
     }
 
    
